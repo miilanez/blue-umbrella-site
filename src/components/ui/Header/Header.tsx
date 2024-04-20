@@ -15,7 +15,7 @@ const links = [
 const Header = () => {
   return (
     <header className="flex px-6 py-3">
-      <nav className="w-full flex flex-row justify-between items-center">
+      <nav className="w-full  container mx-auto flex flex-row justify-between items-center">
         <div id="brand logo">
           <Link href="/">
             <Image
@@ -33,7 +33,7 @@ const Header = () => {
               <Link
                 key={index}
                 href={link.target}
-                className="mx-7 text-blue-950 hover:text-blue-700"
+                className="mx-3 text-blue-950 hover:text-blue-700"
               >
                 {link.name}
               </Link>
