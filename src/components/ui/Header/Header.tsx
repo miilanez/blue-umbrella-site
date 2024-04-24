@@ -36,7 +36,7 @@ const Header = () => {
   };
 
   return (
-    <header className="flex px-6 py-3 overflow-hidden">
+    <header className="flex px-6 py-3 overflow-hidden bg-transparent absolute top-0 left-0 w-full z-50">
       <nav className="w-full container mx-auto flex flex-row justify-between items-center">
         <div id="brand logo">
           <Link href="/">
