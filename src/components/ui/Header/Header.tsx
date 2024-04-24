@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import ContactButton from "./ContactButton";
+import Button from "../Button";
 import Image from "next/image";
 import {
   FaBars,
@@ -12,8 +12,7 @@ import {
   FaTimes,
   FaWhatsapp,
 } from "react-icons/fa";
-import Nav from "./Nav";
-import MobileNav from "./MobileNav";
+import Menu from "./Menu";
 
 const networks = [
   { name: "Instagram", target: "", logo: <FaInstagram /> },
@@ -49,9 +48,9 @@ const Header = () => {
             />
           </Link>
         </div>
-        <Nav containerStyles="hidden md:flex" />
+        <Menu containerStyles="hidden md:flex" />
         <div id="contact" className="hidden md:flex">
-          <ContactButton text="Fale Conosco" link="/" />
+          <Button text="Fale Conosco" link="/" containerStyles="px-4 py-2" />
         </div>
 
         {/* Mobile Button  */}
@@ -83,13 +82,13 @@ const Header = () => {
             </Link>
           </div>
 
-          <MobileNav
+          <Menu
             containerStyles="m-10 flex flex-col text-center gap-8"
             onLinkClick={handleLinkClick}
           />
 
           <div id="contact" className="m-10">
-            <ContactButton text="Fale Conosco" link="/" />
+            <Button text="Fale Conosco" link="/" containerStyles="px-5 py-2" />
           </div>
 
           <div id="social networks" className="flex flex-row">
