@@ -1,21 +1,44 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { ScrollLink } from "react-scroll";
 import ContactButton from "./ContactButton";
 import Image from "next/image";
+import {
+  FaBars,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTimes,
+  FaWhatsapp,
+} from "react-icons/fa";
+import Nav from "./Nav";
+import MobileNav from "./MobileNav";
 
-const links = [
-  { name: "Principal", target: "principal", offset: "-100" },
-  { name: "Sobre", target: "sobre", offset: "-80" },
-  { name: "Serviços", target: "servicos", offset: "-80" },
-  { name: "Contato", target: "contato", offset: "0" },
+const networks = [
+  { name: "Instagram", target: "", logo: <FaInstagram /> },
+  { name: "LinkedIn", target: "", logo: <FaLinkedin /> },
+  { name: "Facebook", target: "", logo: <FaFacebook /> },
+  { name: "WhattsApp", target: "", logo: <FaWhatsapp /> },
 ];
-
 const Header = () => {
+  //gerenciamento de estados
+  const [navbar, setNavbar] = useState(false);
+
+  //mostrar navbar
+  const handleShowNavbar = () => {
+    setNavbar(!navbar);
+  };
+
+  //função para fechar mobile nav assim que clicar em um link do menu
+  const handleLinkClick = () => {
+    setNavbar(false); // Fecha o menu móvel após clicar em um link
+  };
+
   return (
-    <header className="flex px-6 py-3">
-      <nav className="w-full  container mx-auto flex flex-row justify-between items-center">
+    <header className="flex px-6 py-3 overflow-hidden">
+      <nav className="w-full container mx-auto flex flex-row justify-between items-center">
         <div id="brand logo">
           <Link href="/">
             <Image
@@ -27,23 +50,61 @@ const Header = () => {
             />
           </Link>
         </div>
-        <div id="menu">
-          {links.map((link, index) => {
-            return (
-              <Link
-                key={index}
-                href={link.target}
-                className="mx-3 text-blue-950 hover:text-blue-700"
-              >
-                {link.name}
-              </Link>
-            );
-          })}
-        </div>
-        <div id="contact">
+        <Nav containerStyles="hidden md:flex" />
+        <div id="contact" className="hidden md:flex">
           <ContactButton text="Fale Conosco" link="/" />
         </div>
-        {/* <div id="mobile menu"></div> */}
+
+        {/* Mobile Button  */}
+        <div
+          onClick={handleShowNavbar}
+          id="mobile menu"
+          className="block md:hidden text-blue-950 z-10"
+        >
+          {navbar ? <FaTimes size={30} /> : <FaBars size={30} />}
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={
+            navbar
+              ? "fixed top-100 right-0 bottom-0 flex flex-col justify-center items-center w-full h-screen bg-white text-center ease-in duration-300 overflow-y-hidden"
+              : "fixed top-0 right-[-100%] bottom-0 flex flex-col justify-center items-center w-full h-screen bg-white text-center ease-in duration-300"
+          }
+        >
+          <div id="brand logo">
+            <Link href="/">
+              <Image
+                width="250"
+                height="60"
+                src="/assets/images/nav/logo-blue-umbrella.png"
+                alt="Blue Umbrella Tech Incorporated Logo"
+                className="m-10"
+              />
+            </Link>
+          </div>
+
+          <MobileNav
+            containerStyles="m-10 flex flex-col text-center gap-8"
+            onLinkClick={handleLinkClick}
+          />
+
+          <div id="contact" className="m-10">
+            <ContactButton text="Fale Conosco" link="/" />
+          </div>
+
+          <div id="social networks" className="flex flex-row">
+            {networks.map((network, index) => {
+              return (
+                <Link key={index} href={network.target}>
+                  <span className="flex flex-row mt-10 mb-10 px-5 text-3xl">
+                    {network.logo}
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
       </nav>
     </header>
   );
