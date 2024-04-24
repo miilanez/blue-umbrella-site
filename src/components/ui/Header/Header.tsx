@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ScrollLink } from "react-scroll";
 import ContactButton from "./ContactButton";
 import Image from "next/image";
 import {
