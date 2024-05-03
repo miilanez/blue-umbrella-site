@@ -18,7 +18,12 @@ const networks = [
   { name: "Instagram", target: "", logo: <FaInstagram /> },
   { name: "LinkedIn", target: "", logo: <FaLinkedin /> },
   { name: "Facebook", target: "", logo: <FaFacebook /> },
-  { name: "WhattsApp", target: "", logo: <FaWhatsapp /> },
+  {
+    name: "WhattsApp",
+    target:
+      "https://api.whatsapp.com/send?phone=5581982301817&text=Fala%20Gabriel%2C%20Bom%20dia!",
+    logo: <FaWhatsapp />,
+  },
 ];
 
 const Footer = () => {
@@ -49,6 +54,8 @@ const Footer = () => {
                   <Link
                     key={index}
                     href={link.target}
+                    rel="noopener noreferrer"
+                    target="_blank"
                     className="flex flex-col"
                   >
                     {link.name}

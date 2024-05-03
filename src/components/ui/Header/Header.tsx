@@ -50,7 +50,11 @@ const Header = () => {
         </div>
         <Menu containerStyles="hidden md:flex" />
         <div id="contact" className="hidden md:flex">
-          <Button text="Fale Conosco" link="/" containerStyles="px-4 py-2" />
+          <Button
+            text="Fale Conosco"
+            link="https://api.whatsapp.com/send?phone=5581982301817&text=Fala%20Gabriel%2C%20Bom%20dia!"
+            containerStyles="px-4 py-2"
+          />
         </div>
 
         {/* Mobile Button  */}
@@ -88,7 +92,11 @@ const Header = () => {
           />
 
           <div id="contact" className="m-10">
-            <Button text="Fale Conosco" link="/" containerStyles="px-5 py-2" />
+            <Button
+              text="Fale Conosco"
+              link="https://api.whatsapp.com/send?phone=5581982301817&text=Fala%20Gabriel%2C%20Bom%20dia!"
+              containerStyles="px-5 py-2"
+            />
           </div>
 
           <div id="social networks" className="flex flex-row">
