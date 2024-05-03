@@ -9,6 +9,7 @@ const CallToAction = () => {
             Gostou do que viu? Vamos tomar um café e conversar!
           </h1>
           <Button
+            type="button"
             text="Iniciar Projeto"
             link="https://api.whatsapp.com/send?phone=5581982301817&text=Fala%20Gabriel%2C%20Bom%20dia!"
             containerStyles="px-4 py-2"

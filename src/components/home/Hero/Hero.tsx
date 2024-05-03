@@ -30,6 +30,7 @@ const Hero = () => {
               </p>
               <div className="my-8 sm:flex">
                 <Button
+                  type="button"
                   text="Fale Conosco"
                   link="#contato"
                   containerStyles="px-10 py-4"
