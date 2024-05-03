@@ -77,7 +77,7 @@ const Footer = () => {
               );
             })}
           </div>
-          <div className="">gabrielmilanez@blueumbrella.com</div>
+          <div className="">gabrielmilanez@blueumbrella.com.br</div>
         </div>
         <hr className="py-4 mt-4"></hr>
         <div className="w-full text-xs text-center ">
