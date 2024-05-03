@@ -3,7 +3,7 @@ import Link from "next/link";
 interface ButtonProps {
   text: string;
   link: string;
-  type?: undefined;
+  type?: any;
   containerStyles?: string;
 }
 

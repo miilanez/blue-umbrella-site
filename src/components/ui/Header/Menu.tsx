@@ -21,7 +21,7 @@ const Menu: React.FC<MenuProps> = ({ containerStyles, onLinkClick }) => {
             activeClass="active"
             key={index}
             to={link.target}
-            spy="true"
+            spy={true}
             smooth={true}
             duration={500}
             rel="noopener noreferrer"
