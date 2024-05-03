@@ -19,6 +19,9 @@ export default function RootLayout({
   return (
     // <html lang="en" className="flex flex-col justify-center items-center">
     <html lang="en" className={inter.className}>
+      <head>
+        <link rel="icon" href="/assets/images/favicon/favicon.ico" type="image/x-icon" />
+      </head>
       <body className="w-full mx-auto">
         <Header />
         {children}
