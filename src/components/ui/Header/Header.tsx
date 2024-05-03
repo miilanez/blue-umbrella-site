@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Button from "../Button";
 import Image from "next/image";
@@ -23,6 +23,7 @@ const networks = [
 const Header = () => {
   //gerenciamento de estados
   const [navbar, setNavbar] = useState(false);
+  const [color, setColor] = useState("transparent");
 
   //mostrar navbar
   const handleShowNavbar = () => {
@@ -34,8 +35,24 @@ const Header = () => {
     setNavbar(false); // Fecha o menu móvel após clicar em um link
   };
 
+  //efeito na navbar ao scrollar a página
+  useEffect(() => {
+    const changeColor = () => {
+      if (window.scrollY >= 40) {
+        setColor("#ffffff");
+      } else {
+        setColor("transparent");
+      }
+    };
+    window.addEventListener("scroll", changeColor);
+  }, []);
+
   return (
-    <header className="flex px-6 py-3 overflow-hidden bg-transparent absolute top-0 left-0 w-full z-50">
+    <header
+      style={{ backgroundColor: `${color}` }}
+      // className="flex px-6 py-3 overflow-hidden absolute top-0 left-0 w-full z-50"
+      className="fixed w-full py-3 z-10 ease-in duration-300"
+    >
       <nav className="w-full container mx-auto flex flex-row justify-between items-center">
         <div id="brand logo">
           <Link href="/">
