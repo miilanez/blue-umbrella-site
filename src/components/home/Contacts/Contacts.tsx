@@ -1,10 +1,9 @@
-import Button from "@/components/ui/Button";
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import CallToAction from "./CallToAction";
 
 const Contacts = () => {
   return (
-    <section id="contato" className="py-10">
+    <section id="contato" className="py-20">
       <div className="">
         <CallToAction />
       </div>

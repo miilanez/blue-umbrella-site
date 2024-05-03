@@ -57,7 +57,7 @@ import CardService from "./CardService";
 
 const Services = () => {
   return (
-    <section id="servicos" className="py-12">
+    <section id="servicos" className="py-16">
       <div className="container mx-auto px-4 overflow-hidden">
         <div className="mb-12 text-center mx-auto">
           <h1 className="text-blue-950 mb-16 leading-10 font-semibold text-4xl sm:text-6xl xl:text-8xl p-2 overflow-hidden">
