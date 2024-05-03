@@ -3,7 +3,7 @@ import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
 const Contacts = () => {
   return (
-    <section className="py-10">
+    <section id="contato" className="py-10">
       <div className="w-full container mx-auto flex flex-col md:flex-row justify-around items-center text-left">
         <div className="w-full md:w-1/2 p-6 flex flex-col">
           <h1 className="text-3xl overflow-hidden font-extrabold text-blue-900 sm:text-4xl">
@@ -64,7 +64,7 @@ const Contacts = () => {
             width="400"
             height="400"
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>

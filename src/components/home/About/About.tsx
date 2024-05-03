@@ -3,7 +3,7 @@ import AnimateLogo from "./AnimateLogo";
 
 const About = () => {
   return (
-    <section className="py-10">
+    <section id="sobre" className="py-10">
       <div className="w-full container mx-auto flex flex-col">
         <div className=" flex flex-col items-center p-8 mx-auto">
           <div className="flex flex-col w-full mb-8 text-center">
