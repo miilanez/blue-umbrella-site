@@ -25,7 +25,7 @@ const Contacts = () => {
             </div>
             <div className="flex flex-row items-center">
               <FaEnvelope size={20} />{" "}
-              <p className="ml-2">gabrielmilanez@blueumbrella.com.br</p>
+              <p className="ml-2">gabriel.milanez@outlook.com</p>
             </div>
             <h3 className="mt-6 font-semibold text-lg text-blue-950">
               Telefone

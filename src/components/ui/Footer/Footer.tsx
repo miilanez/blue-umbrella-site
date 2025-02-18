@@ -42,7 +42,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-sm text-center py-4 md:text-left">
-              Nosso trabalho é trazer a melhor solução para você.
+              Transformando ideias em soluções web eficientes e inovadoras.
             </p>
             <hr className="md:hidden"></hr>
           </div>
@@ -77,11 +77,11 @@ const Footer = () => {
               );
             })}
           </div>
-          <div className="">gabrielmilanez@blueumbrella.com.br</div>
+          <div className="">gabriel.milanez@outlook.com</div>
         </div>
         <hr className="py-4 mt-4"></hr>
         <div className="w-full text-xs text-center ">
-          Copyright © 2024 Blue Umbrella Tech | Todos os direitos reservados
+          Copyright © 2025 Blue Umbrella Tech | Todos os direitos reservados
         </div>
       </div>
     </footer>
